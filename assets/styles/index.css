@@ -1,0 +1,208 @@
+/* ----------------- */
+/*      RESET        */
+/* ----------------- */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+
+}
+
+/* ----------------- */
+/* CUSTOM PROPERTIES */
+/* ----------------- */
+:root {
+    /* primary color */
+    --clr-green: hsl(75, 94%, 57%);
+    /* neutrals */
+    --clr-gray-400: hsl(0, 0%, 80%);
+    --clr-gray-700: hsl(0, 0%, 20%);
+    --clr-gray-800: hsl(0, 0%, 12%);
+    --clr-gray-900: hsl(0, 0%, 8%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 14px;
+    --spacing-200: 16px;
+    --spacing-250: 24px;
+    --spacing-300: 32px;
+    --spacing-400: 40px;
+
+    --fs-200: 14px;
+    --fs-300: 16px;
+    --fs-400: 24px;
+}
+
+/* ----------------- */
+/*      PRESETS      */
+/* ----------------- */
+
+.text-preset-1 {
+    font-size: var(--fs-400);
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.text-preset-2 {
+    font-size: var(--fs-300);
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.text-preset-3 {
+    font-size: var(--fs-200);
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.text-preset-3-bold {
+    font-size: var(--fs-200);
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ----------------- */
+/* SOCIAL LINKS PROFILE */
+/* ----------------- */
+
+body {
+    font-size: 16px;
+    background: var(--clr-gray-900, #141414);
+    font-family: "Inter", sans;
+}
+
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Social Links Profile Component */
+.social-links-profile {
+    display: flex;
+    width: 384px;
+    padding: var(--spacing-400, 40px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-250, 24px);
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--clr-gray-800, #1f1f1f);
+    box-shadow: 2px 8px 24px 0px rgba(0, 0, 0, .15);
+
+    /* Profile Avatar Image Style */
+    .social-links-profile__avatar {
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    /* Profile Info Style */
+    .social-links-profile__info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-100, 8px);
+        align-self: stretch;
+
+        /* Profile Name */
+        h1 {
+            color: var(--clr-white, #fff);
+            font-size: var(--fs-400);
+            font-weight: 600
+        }
+
+        /* Profile Location Information */
+        .location-info {
+            color: var(--clr-green, #c5f82a);
+            font-size: var(--fs-200);
+            font-weight: 600
+        }
+
+        /* Profile Short Description */
+        .description {
+            color: var(--clr-gray-400, #cccccc);
+            font-size: var(--fs-200);
+            font-weight: 400;
+            margin-top: var(--spacing-200, 16px);
+        }
+
+    }
+
+    /* Link List Styles */
+    .social-links-profile__link-list {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        padding: 0;
+        gap: var(--spacing-200, 16px);
+
+        a {
+            text-decoration: none;
+            align-self: stretch;
+            text-align: center;
+            color: var(--clr-white, #fff);
+            font-size: var(--fs-200);
+            font-weight: 600;
+            background: var(--clr-gray-700, #333333);
+            padding: var(--spacing-200, 16px);
+            border-radius: 10px;
+            line-height: 100%;
+
+            &:hover,
+            &:active,
+            &:focus {
+                cursor: pointer;
+                background: var(--clr-green, #c5f82a);
+                color: var(--clr-gray-900, #141414);
+                transition: all 0.3s ease-in-out;
+                outline: none;
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--clr-green, #c5f82a);
+                outline-offset: 2px;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    color: var(--clr-gray-400, #cccccc);
+
+    a {
+        color: var(--clr-green, #c5f82a);
+    }
+}
