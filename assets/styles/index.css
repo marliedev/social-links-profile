@@ -45,30 +45,6 @@
 /*      PRESETS      */
 /* ----------------- */
 
-.text-preset-1 {
-    font-size: var(--fs-400);
-    font-weight: 700;
-    line-height: 150%;
-}
-
-.text-preset-2 {
-    font-size: var(--fs-300);
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.text-preset-3 {
-    font-size: var(--fs-200);
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.text-preset-3-bold {
-    font-size: var(--fs-200);
-    font-weight: 700;
-    line-height: 150%;
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
